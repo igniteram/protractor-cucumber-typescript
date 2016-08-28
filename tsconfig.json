@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "declaration": false,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "outDir": "TypeScript",
+        "types": ["node","cucumber"]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

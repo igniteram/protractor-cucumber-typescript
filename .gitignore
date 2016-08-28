@@ -1,0 +1,4 @@
+node_modules/
+TyepScript/
+*.js
+.DS_Store
