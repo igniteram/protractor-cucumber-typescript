@@ -60,7 +60,7 @@ Feature: To search typescript in google
     export  = function() {
     let search: SearchPageObject = new SearchPageObject();
     
-    this.Given(/^I am on google page$/, function () {
+    this.Given(/^I am on google page$/, () => {
     return expect(browser.getTitle()).to.eventually.equal('Google');
            });
            }
