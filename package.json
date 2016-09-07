@@ -25,7 +25,6 @@
     "test": "protractor TypeScript/Config/config.js"
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "@types/cucumber": "0.0.31",
     "@types/node": "^6.0.38",
@@ -40,7 +39,7 @@
     "typescript": "^2.0.0"
   },
   "repository": {
-        "type": "git"
-        , "url": "https://github.com/igniteram/protractor-cucumber-typescript"
-    }
+    "type": "git",
+    "url": "https://github.com/igniteram/protractor-cucumber-typescript"
+  }
 }

@@ -1,6 +1,7 @@
 import {ProtractorBrowser} from 'protractor';
 
 export let config = {
+
     directConnect: true,
 
     baseUrl: 'http://www.google.com',
