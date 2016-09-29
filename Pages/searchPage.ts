@@ -1,4 +1,4 @@
-import {$} from 'protractor/globals';
+import {$} from 'protractor';
 
 export class SearchPageObject {
     public searchTextBox:any;

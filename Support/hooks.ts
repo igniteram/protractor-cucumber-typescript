@@ -1,8 +1,7 @@
 /*jslint node: true*/
-import {browser} from 'protractor/globals';
+import {browser} from 'protractor';
 import * as fs from 'fs';
 import {config} from '../Config/config';
-import * as cucumber from '../node_modules/@types/cucumber';
 
 export = function () {
         

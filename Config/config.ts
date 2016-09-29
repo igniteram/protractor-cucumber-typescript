@@ -18,10 +18,10 @@ export let config = {
     ],
 
     onPrepare: () => {
-        let globals = require('protractor/globals');
+        let globals = require('protractor');
         let browser: ProtractorBrowser = globals.browser;
         browser.ignoreSynchronization = true;
-        browser.driver.manage().window().maximize();
+        browser.manage().window().maximize();
        
     },
     cucumberOpts: {
