@@ -44,6 +44,7 @@ https://nodejs.org/en/download/
 ```
 Feature: To search typescript in google
 @TypeScriptScenario
+
   Scenario: Typescript Google Search
     Given I am on google page
     When I type "Typescript"
@@ -60,54 +61,55 @@ Feature: To search typescript in google
     let expect = chai.expect;
     
     export  = function() {
-    let search: SearchPageObject = new SearchPageObject();
+        let search: SearchPageObject = new SearchPageObject();
     
-    this.Given(/^I am on google page$/, () => {
-    return expect(browser.getTitle()).to.eventually.equal('Google');
-           });
-           }
+        this.Given(/^I am on google page$/, () => {
+            return expect(browser.getTitle()).to.eventually.equal('Google');
+        });
+    }
 ```
-         
+
 ####Writing Page Objects
 ```
 import {$} from 'protractor/globals';
     
 export class SearchPageObject {
-   public searchTextBox:any;
-   public searchButton:any;
-constructor() {
+    public searchTextBox:any;
+    public searchButton:any;
+
+    constructor() {
         this.searchTextBox = $("input[name='q']");
         this.searchButton = $("button[name='btnG']");
-      }
     }
+}
 ```
 ####Cucumber Hooks
 Following method takes screenshot on failure of each scenario
 ```
 this.After((scenario, done) => {
-if (scenario.isFailed()) {
-return browser.takeScreenshot().then(function (base64png) {
-let decodedImage = new Buffer(base64png, 'base64').toString('binary');
-scenario.attach(decodedImage, 'image/png');
-}, (err) => {
-   done(err);
-});
-} else {
-  done();
-}
+    if (scenario.isFailed()) {
+        return browser.takeScreenshot().then(function (base64png) {
+            let decodedImage = new Buffer(base64png, 'base64').toString('binary');
+            scenario.attach(decodedImage, 'image/png');
+        }, (err) => {
+            done(err);
+        });
+    } else {
+        done();
+    }
 });
 ```
 ####CucumberOpts Tags
 Following configuration shows to call specific tags from feature files
 ```
-    cucumberOpts: {
+cucumberOpts: {
     compiler: "ts:ts-node/register",
     monochrome: true,
     strict: true,
     plugin: ["pretty"],
     require: ['../StepDefinitions/*.ts', '../Support/*.ts'],
     tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
-    }
+}
 ```
 ##Contributions
 For contributors who want to improve this repo by contributing some code, reporting bugs, issues or improving documentation - PR's are highly welcome, please maintain the coding style , folder structure , detailed description of documentation and bugs/issues with examples if possible.
