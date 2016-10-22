@@ -100,14 +100,14 @@ this.After((scenario, done) => {
 ####CucumberOpts Tags
 Following configuration shows to call specific tags from feature files
 ```
-    cucumberOpts: {
+cucumberOpts: {
     compiler: "ts:ts-node/register",
     monochrome: true,
     strict: true,
     plugin: ["pretty"],
     require: ['../StepDefinitions/*.ts', '../Support/*.ts'],
     tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
-    }
+}
 ```
 ##Contributions
 For contributors who want to improve this repo by contributing some code, reporting bugs, issues or improving documentation - PR's are highly welcome, please maintain the coding style , folder structure , detailed description of documentation and bugs/issues with examples if possible.
