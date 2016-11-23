@@ -14,7 +14,7 @@ export let config = {
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     specs: [
-        '../../Features/*.feature'
+        '../../features/*.feature'
     ],
 
     onPrepare: () => {
@@ -29,7 +29,7 @@ export let config = {
         monochrome: true,
         strict: true,
         plugin: ["pretty"],
-        require: ['../../StepDefinitions/*.ts', '../../Support/*.ts'],
+        require: ['../../stepDefinitions/*.ts', '../../support/*.ts'],
         tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
     }
 };
