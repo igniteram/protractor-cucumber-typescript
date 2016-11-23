@@ -7,7 +7,7 @@ export let config = {
     baseUrl: 'http://www.google.com',
 
     capabilities: {
-        browserName: 'firefox'
+        browserName: 'chrome'
     },
 
     framework: 'custom',

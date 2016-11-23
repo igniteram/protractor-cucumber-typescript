@@ -7,7 +7,7 @@
         "declaration": false,
         "removeComments": false,
         "noImplicitAny": false,
-        "outDir": "TypeScript",
+        "outDir": "typeScript",
         "types": ["node","cucumber"]
     },
     "exclude": [

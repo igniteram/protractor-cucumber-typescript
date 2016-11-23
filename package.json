@@ -21,14 +21,14 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "pretest": "npm run tsc",
+    "pretest": "webdriver-manager update && npm run tsc",
     "test": "protractor TypeScript/Config/config.js"
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
   "devDependencies": {
     "@types/cucumber": "0.0.32",
     "@types/node": "^6.0.40",
-    "@types/selenium-webdriver": "^2.53.30",
+    "@types/selenium-webdriver": "^2.53.35",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "cucumber": "^1.2.2",
