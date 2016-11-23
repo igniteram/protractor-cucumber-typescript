@@ -1,7 +1,7 @@
 /*jslint node: true*/
 import {browser} from 'protractor';
 import * as fs from 'fs';
-import {config} from '../Config/config';
+import {config} from '../config/config';
 
 export = function () {
         

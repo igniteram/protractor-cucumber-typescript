@@ -1,5 +1,5 @@
 import {browser} from 'protractor';
-import {SearchPageObject} from '../Pages/searchPage';
+import {SearchPageObject} from '../pages/searchPage';
 let chai = require('chai').use(require('chai-as-promised'));
 let expect = chai.expect;
 

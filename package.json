@@ -22,7 +22,7 @@
   "scripts": {
     "tsc": "tsc",
     "pretest": "webdriver-manager update && npm run tsc",
-    "test": "protractor TypeScript/Config/config.js"
+    "test": "protractor typeScript/config/config.js"
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
   "devDependencies": {

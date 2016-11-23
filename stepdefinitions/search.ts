@@ -1,4 +1,4 @@
-import {SearchPageObject} from '../Pages/searchPage';
+import {SearchPageObject} from '../pages/searchPage';
 
 export = function () {
     let search: SearchPageObject = new SearchPageObject();
