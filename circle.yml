@@ -12,11 +12,6 @@ dependencies:
   post:
     - npm run tsc
     - npm run webdriver-update
-    - npm run webdriver-start:
-          background: true
-    - npm start:
-          background: true
-
 test:
   override:
     - npm test
