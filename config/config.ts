@@ -26,9 +26,8 @@ export let config = {
     },
     cucumberOpts: {
         compiler: "ts:ts-node/register",
-        monochrome: true,
         strict: true,
-        plugin: ["pretty"],
+        format: ['pretty'],
         require: ['../../stepDefinitions/*.ts', '../../support/*.ts'],
         tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
     }
