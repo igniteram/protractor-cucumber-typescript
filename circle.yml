@@ -1,0 +1,22 @@
+machine:
+  node:
+    version: 6.9.1
+  environment:
+    # Fix issue with selenium-server in containers.
+    # See http://github.com/SeleniumHQ/docker-selenium/issues/87
+    DBUS_SESSION_BUS_ADDRESS: /dev/null
+
+dependencies:
+  override:
+    - npm update
+  post:
+    - npm run tsc
+    - npm run webdriver-update
+    - npm run webdriver-start:
+          background: true
+    - npm start:
+          background: true
+
+test:
+  override:
+    - npm test

@@ -1,7 +1,4 @@
 ###Protractor-Cucumber-TypeScript Setup Guide   
-[![Build Status](https://travis-ci.org/igniteram/protractor-cucumber-typescript.svg?branch=master)](https://travis-ci.org/igniteram/protractor-cucumber-typescript)
-[![dependencies](https://david-dm.org/igniteram/protractor-cucumber-typescript.svg)](https://david-dm.org/igniteram/protractor-cucumber-typescript)
-
 This project demonstrates the basic protractor-cucumber-typescript framework project setup.
 
 ###Features
