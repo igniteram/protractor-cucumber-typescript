@@ -1,8 +1,8 @@
-import {ProtractorBrowser} from 'protractor';
+import {browser,Config} from 'protractor';
 
-export let config = {
+export let config:Config = {
 
-    directConnect: true,
+    seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
 
     baseUrl: 'http://www.google.com',
 
@@ -18,8 +18,7 @@ export let config = {
     ],
 
     onPrepare: () => {
-        let globals = require('protractor');
-        let browser: ProtractorBrowser = globals.browser;
+
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
        
@@ -28,7 +27,7 @@ export let config = {
         compiler: "ts:ts-node/register",
         strict: true,
         format: ['pretty'],
-        require: ['../../stepDefinitions/*.ts', '../../support/*.ts'],
+        require: ['../../stepdefinitions/*.ts', '../../support/*.ts'],
         tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
     }
 };

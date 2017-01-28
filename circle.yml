@@ -10,9 +10,10 @@ dependencies:
   override:
     - npm update
   post:
-    - npm install
     - npm run tsc
     - npm run webdriver-update
+    - npm run webdriver-start:
+          background: true
 test:
   override:
     - npm test
