@@ -5,7 +5,7 @@ import {config} from '../config/config';
 
 export = function () {
         
-        this.registerHandler('BeforeFeature', (event) => {
+        this.registerHandler('BeforeFeature',{timeout:10*1000}, (event) => {
             return browser.get(config.baseUrl);
         });
 
