@@ -6,10 +6,9 @@ This project demonstrates the basic protractor-cucumber-typescript framework pro
 ###Features
 * No typings.json or typings folder, they have been replaced by better **'@types'** modules in package.json
 * ts-node(typescript execution environment for node) in cucumberOpts. 
-* All scripts written with Typescript2.0
+* All scripts written with > Typescript2.0
 * Neat folder structures with transpiled js files in separate output folder.
 * Page Object design pattern implementation
-* DirectConnect capability for Chrome & Firefox(works best with 47.0.1) browsers
 * Extensive hooks implemented for BeforeFeature, AfterScenarios etc.
 * Screenshots on failure feature scenarios
 
@@ -20,7 +19,7 @@ This project demonstrates the basic protractor-cucumber-typescript framework pro
 1.NodeJS installed globally in the system.
 https://nodejs.org/en/download/
 
-2.Chrome or Firefox(47.0.1 recommended) browsers installed.
+2.Chrome or Firefox browsers installed.
 
 3.Text Editor(Optional) installed-->Sublime/Visual Studio Code/Brackets.
 
@@ -33,11 +32,24 @@ https://nodejs.org/en/download/
 * All the dependencies from package.json and ambient typings would be installed in node_modules folder.
 
 ####Run Scripts
+
+* First step is to fire up the selenium server which could be done in many ways,  **webdriver-manager** proves very handy for this.
+
+```
+npm run webdriver-update
+``` 
+That should download the **chrome & gecko driver** binaries locally for you!
+
+```
+npm run webdriver-start
+```
+That should start your selenium server!
+
 ```
     npm test
 ```
 * The above command would create an output folder named 'Typescript' and transpile the .ts files.
-* It launches the Firefox Browser and run the scripts
+* It launches the Chrome Browser and run the scripts
 
 ####Writing Features
 ```
