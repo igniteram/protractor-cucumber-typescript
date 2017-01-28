@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master)
+
 ###Protractor-Cucumber-TypeScript Setup Guide   
 This project demonstrates the basic protractor-cucumber-typescript framework project setup.
 
