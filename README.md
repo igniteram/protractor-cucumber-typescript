@@ -65,7 +65,7 @@ Feature: To search typescript in google
 ####Writing Step Definitions
     
 ```
-    import {browser} from 'protractor/globals';
+    import {browser} from 'protractor';
     import {SearchPageObject} from '../Pages/searchPage';
     import * as cucumber from '../node_modules/@types/cucumber';
     let chai = require('chai').use(require('chai-as-promised'));
@@ -82,7 +82,7 @@ Feature: To search typescript in google
 
 ####Writing Page Objects
 ```
-import {$} from 'protractor/globals';
+import {$} from 'protractor';
     
 export class SearchPageObject {
     public searchTextBox:any;
@@ -115,9 +115,8 @@ Following configuration shows to call specific tags from feature files
 ```
 cucumberOpts: {
     compiler: "ts:ts-node/register",
-    monochrome: true,
     strict: true,
-    plugin: ["pretty"],
+    format: ["pretty"],
     require: ['../StepDefinitions/*.ts', '../Support/*.ts'],
     tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
 }
