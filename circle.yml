@@ -1,6 +1,6 @@
 machine:
   node:
-    version: 6.9.1
+    version: 7.5
   environment:
     # Fix issue with selenium-server in containers.
     # See http://github.com/SeleniumHQ/docker-selenium/issues/87
