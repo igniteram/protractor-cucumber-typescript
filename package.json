@@ -36,12 +36,9 @@
     "protractor-cucumber-framework": "^0.6.0"
   },
   "dependencies": {
-    "protractor": "^5.0.0",
+    "protractor": "^5.1.1",
     "ts-node": "^2.0.0",
     "typescript": "^2.1.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/igniteram/protractor-cucumber-typescript"
-  }
+  "repository": "https://github.com/igniteram/protractor-cucumber-typescript"
 }
