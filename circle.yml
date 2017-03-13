@@ -10,6 +10,10 @@ dependencies:
   override:
     - npm update
   post:
+  # install latest google chrome
+    - curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome.deb
+    - sleep 5
     - npm run tsc
     - npm run webdriver-update
     - npm run webdriver-start:
