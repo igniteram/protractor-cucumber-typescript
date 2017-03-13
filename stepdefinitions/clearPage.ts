@@ -1,11 +1,10 @@
-import {SearchPageObject} from '../pages/searchPage';
+import { SearchPageObject } from '../pages/searchPage';
+import { defineSupportCode } from 'cucumber';
 
-export  = function() {
-    
+defineSupportCode(function ({Then}) {
     let search: SearchPageObject = new SearchPageObject();
 
-    this.Then(/^I clear the search text$/, () => {
+    Then(/^I clear the search text$/, () => {
         return search.searchTextBox.clear();
     });
-
-}
+})
