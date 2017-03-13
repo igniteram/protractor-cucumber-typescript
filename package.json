@@ -1,6 +1,6 @@
 {
   "name": "protractor-typescript-cucumber",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "description": "To demostrate protractor cucumber tests for angular/non angular apps with allure report framework",
   "homepage": "https://github.com/igniteram/protractor-cucumber-typescript",
