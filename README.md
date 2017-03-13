@@ -6,7 +6,7 @@ This project demonstrates the basic protractor-cucumber-typescript framework pro
 ###Features
 * No typings.json or typings folder, they have been replaced by better **'@types'** modules in package.json
 * ts-node(typescript execution environment for node) in cucumberOpts. 
-* All scripts written with > Typescript2.0
+* All scripts written with > Typescript2.0 $ Cucumber2.0
 * Neat folder structures with transpiled js files in separate output folder.
 * Page Object design pattern implementation
 * Extensive hooks implemented for BeforeFeature, AfterScenarios etc.
@@ -65,19 +65,19 @@ Feature: To search typescript in google
 ####Writing Step Definitions
     
 ```
-    import {browser} from 'protractor';
-    import {SearchPageObject} from '../Pages/searchPage';
-    import * as cucumber from '../node_modules/@types/cucumber';
+    import { browser } from 'protractor';
+    import { SearchPageObject } from '../pages/searchPage';
+    import { defineSupportCode } from 'cucumber';
     let chai = require('chai').use(require('chai-as-promised'));
     let expect = chai.expect;
-    
-    export  = function() {
-        let search: SearchPageObject = new SearchPageObject();
-    
-        this.Given(/^I am on google page$/, () => {
-            return expect(browser.getTitle()).to.eventually.equal('Google');
-        });
-    }
+
+    defineSupportCode(function ({Given}) {
+    let search: SearchPageObject = new SearchPageObject();
+
+        Given(/^I am on google page$/, () => {
+        return expect(browser.getTitle()).to.eventually.equal('Google');
+    });
+})
 ```
 
 ####Writing Page Objects
@@ -97,7 +97,7 @@ export class SearchPageObject {
 ####Cucumber Hooks
 Following method takes screenshot on failure of each scenario
 ```
-this.After((scenario, done) => {
+After((scenario, done) => {
     if (scenario.isFailed()) {
         return browser.takeScreenshot().then(function (base64png) {
             let decodedImage = new Buffer(base64png, 'base64').toString('binary');
@@ -118,9 +118,15 @@ cucumberOpts: {
     strict: true,
     format: ["pretty"],
     require: ['../StepDefinitions/*.ts', '../Support/*.ts'],
-    tags: '@TypeScriptScenario,@CucumberScenario,@ProtractorScenario'
+    tags: '@TypeScriptScenario or @CucumberScenario or @ProtractorScenario'
 }
 ```
+####HTML Reports
+Currently this project has been integrated with [cucumber-html-reporter](https://github.com/gkushang/cucumber-html-reporter), which is generated in the `reports` folder when you run `npm test`.
+They can be customized according to user's specific needs.
+
+![cucumberreporterscreen](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/cucumberReporter.PNG)
+
 ##Contributions
 For contributors who want to improve this repo by contributing some code, reporting bugs, issues or improving documentation - PR's are highly welcome, please maintain the coding style , folder structure , detailed description of documentation and bugs/issues with examples if possible.
 
@@ -129,22 +135,4 @@ For contributors who want to improve this repo by contributing some code, report
 MIT License
 
 Copyright (c) 2016 Ram Pasala
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 ```
