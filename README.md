@@ -1,9 +1,9 @@
 [![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master)
 
-###Protractor-Cucumber-TypeScript Setup Guide   
+### Protractor-Cucumber-TypeScript Setup Guide   
 This project demonstrates the basic protractor-cucumber-typescript framework project setup.
 
-###Features
+### Features
 * No typings.json or typings folder, they have been replaced by better **'@types'** modules in package.json
 * ts-node(typescript execution environment for node) in cucumberOpts. 
 * All scripts written with > Typescript2.0 $ Cucumber2.0
@@ -13,9 +13,9 @@ This project demonstrates the basic protractor-cucumber-typescript framework pro
 * Screenshots on failure feature scenarios
 
 
-###To Get Started
+### To Get Started
 
-####Pre-requisites
+#### Pre-requisites
 1.NodeJS installed globally in the system.
 https://nodejs.org/en/download/
 
@@ -23,7 +23,7 @@ https://nodejs.org/en/download/
 
 3.Text Editor(Optional) installed-->Sublime/Visual Studio Code/Brackets.
 
-####Setup Scripts
+#### Setup Scripts
 * Clone the repository into a folder
 * Go inside the folder and run following command from terminal/command prompt
 ```
@@ -31,7 +31,7 @@ https://nodejs.org/en/download/
 ```
 * All the dependencies from package.json and ambient typings would be installed in node_modules folder.
 
-####Run Scripts
+#### Run Scripts
 
 * First step is to fire up the selenium server which could be done in many ways,  **webdriver-manager** proves very handy for this.
 
@@ -46,12 +46,15 @@ npm run webdriver-start
 That should start your selenium server!
 
 ```
-    npm test
+npm run tsc
 ```
-* The above command would create an output folder named 'Typescript' and transpile the .ts files.
-* It launches the Chrome Browser and run the scripts
+The above command would create an output folder named 'typeScript' and transpile the .ts files.
+```
+npm test
+```
+It launches the Chrome Browser and run the scripts
 
-####Writing Features
+#### Writing Features
 ```
 Feature: To search typescript in google
 @TypeScriptScenario
@@ -62,7 +65,7 @@ Feature: To search typescript in google
     Then I click on search button
     Then I clear the search text
 ```
-####Writing Step Definitions
+#### Writing Step Definitions
     
 ```
     import { browser } from 'protractor';
@@ -80,7 +83,7 @@ Feature: To search typescript in google
 })
 ```
 
-####Writing Page Objects
+#### Writing Page Objects
 ```
 import {$} from 'protractor';
     
@@ -94,7 +97,7 @@ export class SearchPageObject {
     }
 }
 ```
-####Cucumber Hooks
+#### Cucumber Hooks
 Following method takes screenshot on failure of each scenario
 ```
 After((scenario, done) => {
@@ -110,7 +113,7 @@ After((scenario, done) => {
     }
 });
 ```
-####CucumberOpts Tags
+#### CucumberOpts Tags
 Following configuration shows to call specific tags from feature files
 ```
 cucumberOpts: {
@@ -121,16 +124,16 @@ cucumberOpts: {
     tags: '@TypeScriptScenario or @CucumberScenario or @ProtractorScenario'
 }
 ```
-####HTML Reports
+#### HTML Reports
 Currently this project has been integrated with [cucumber-html-reporter](https://github.com/gkushang/cucumber-html-reporter), which is generated in the `reports` folder when you run `npm test`.
 They can be customized according to user's specific needs.
 
 ![cucumberreporterscreen](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/cucumberReporter.PNG)
 
-##Contributions
+## Contributions
 For contributors who want to improve this repo by contributing some code, reporting bugs, issues or improving documentation - PR's are highly welcome, please maintain the coding style , folder structure , detailed description of documentation and bugs/issues with examples if possible.
 
-##License
+## License
 ```   
 MIT License
 
