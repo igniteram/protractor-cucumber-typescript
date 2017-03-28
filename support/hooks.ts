@@ -6,7 +6,7 @@ import { defineSupportCode } from "cucumber";
 import * as reporter from 'cucumber-html-reporter';
 import { mkdirp } from 'mkdirp';
 
-defineSupportCode(function ({registerHandler, registerListener, After, setDefaultTimeout}) {
+defineSupportCode(function ({ registerHandler, registerListener, After, setDefaultTimeout }) {
     setDefaultTimeout(10 * 1000);
     let jsonReports = process.cwd() + "/reports/json";
     let htmlReports = process.cwd() + "/reports/html";
@@ -17,18 +17,15 @@ defineSupportCode(function ({registerHandler, registerListener, After, setDefaul
         setTimeout(callback, 5000);
     });
 
-    After((scenario, done) => {
+    After(function (scenario) {
+        let world = this;
         if (scenario.isFailed()) {
-            return browser.takeScreenshot().then(function (base64png) {
-                let decodedImage = new Buffer(base64png, 'base64').toString('binary');
-                scenario.attach(decodedImage, 'image/png');
-            }, (err) => {
-                done(err);
+            return browser.takeScreenshot().then(function (screenShot) {
+                // screenShot is a base-64 encoded PNG
+                world.attach(screenShot, 'image/png');
             });
-        } else {
-            done();
         }
-    });
+    })
 
     let cucumberReporterOptions = {
         theme: "bootstrap",
