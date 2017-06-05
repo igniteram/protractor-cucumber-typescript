@@ -4,6 +4,8 @@ export let config: Config = {
 
     seleniumAddress: 'http://127.0.0.1:4444/wd/hub',
 
+    SELENIUM_PROMISE_MANAGER: false,
+
     baseUrl: 'http://www.google.com',
 
     capabilities: {
