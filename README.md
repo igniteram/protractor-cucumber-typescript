@@ -77,8 +77,8 @@ Feature: To search typescript in google
     defineSupportCode(function ({Given}) {
     let search: SearchPageObject = new SearchPageObject();
 
-        Given(/^I am on google page$/, () => {
-        return expect(browser.getTitle()).to.eventually.equal('Google');
+        Given(/^I am on google page$/, async () => {
+        await expect(browser.getTitle()).to.eventually.equal('Google');
     });
 })
 ```
@@ -100,18 +100,14 @@ export class SearchPageObject {
 #### Cucumber Hooks
 Following method takes screenshot on failure of each scenario
 ```
-After((scenario, done) => {
-    if (scenario.isFailed()) {
-        return browser.takeScreenshot().then(function (base64png) {
-            let decodedImage = new Buffer(base64png, 'base64').toString('binary');
-            scenario.attach(decodedImage, 'image/png');
-        }, (err) => {
-            done(err);
-        });
-    } else {
-        done();
-    }
-});
+After(async function (scenarioResult) {
+        let world = this;
+    if (scenarioResult.isFailed()) {
+            let screenShot = await browser.takeScreenshot();
+            // screenShot is a base-64 encoded PNG
+            world.attach(screenShot, 'image/png');
+        }
+})
 ```
 #### CucumberOpts Tags
 Following configuration shows to call specific tags from feature files
