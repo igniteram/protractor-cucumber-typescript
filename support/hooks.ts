@@ -12,18 +12,16 @@ defineSupportCode(function ({ registerHandler, registerListener, After, setDefau
     let htmlReports = process.cwd() + "/reports/html";
     let targetJson = jsonReports + "/cucumber_report.json";
 
-    registerHandler('BeforeFeature', function (event, callback) {
-        browser.get(config.baseUrl);
-        setTimeout(callback, 5000);
+    registerHandler('BeforeFeature', async function () {
+        await browser.get(config.baseUrl);
     });
 
-    After(function (scenario) {
+    After(async function (scenarioResult) {
         let world = this;
-        if (scenario.isFailed()) {
-            return browser.takeScreenshot().then(function (screenShot) {
-                // screenShot is a base-64 encoded PNG
-                world.attach(screenShot, 'image/png');
-            });
+        if (scenarioResult.isFailed()) {
+            let screenShot = await browser.takeScreenshot();
+            // screenShot is a base-64 encoded PNG
+            world.attach(screenShot, 'image/png');
         }
     })
 
