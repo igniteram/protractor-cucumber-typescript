@@ -1,4 +1,5 @@
-![protractorcucumbertypescript](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractor-typescript-cucumber.png)
+![protractorcucumbertypescript](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractorTypescriptCucumber.png)
+
 
 [![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master)
 
@@ -58,7 +59,7 @@ npm run tsc
 ```
 npm test
 ```
-![result](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractor-cucumber-typescript-result.gif)
+![result](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractorCucumberTypescriptResult.gif)
 
 #### Writing Features
 ```
@@ -130,7 +131,7 @@ cucumberOpts: {
 Currently this project has been integrated with [cucumber-html-reporter](https://github.com/gkushang/cucumber-html-reporter), which is generated in the `reports` folder when you run `npm test`.
 They can be customized according to user's specific needs.
 
-![cucumberreporterscreen](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/cucumberReporter.png)
+![cucumberreporterscreen](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/cucumberReporter.PNG)
 
 ## Contributions
 For contributors who want to improve this repo by contributing some code, reporting bugs, issues or improving documentation - PR's are highly welcome, please maintain the coding style , folder structure , detailed description of documentation and bugs/issues with examples if possible.
