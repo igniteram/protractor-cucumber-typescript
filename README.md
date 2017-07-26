@@ -1,6 +1,6 @@
 ![protractorcucumbertypescript](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractor-typescript-cucumber.png)
 
-[![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master)
+[![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ### Protractor-Cucumber-TypeScript Setup Guide   
 This project demonstrates the basic protractor-cucumber-typescript framework project setup.
