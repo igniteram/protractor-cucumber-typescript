@@ -6,6 +6,6 @@ export class SearchPageObject {
 
     constructor() {
         this.searchTextBox = $("input[name='q']");
-        this.searchButton = $("button[name='btnG']");
+        this.searchButton = $("input[value='Google Search']");
     }
 }
