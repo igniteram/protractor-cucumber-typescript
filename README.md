@@ -1,9 +1,23 @@
-![protractorcucumbertypescript](https://raw.githubusercontent.com/igniteram/protractor-cucumber-typescript/master/images/protractor-typescript-cucumber.png)
+<p align="center">
+<img src= "./images/protractor-typescript-cucumber.png" height=300 alt="titleImage.png"/>
+</p>
 
-[![CircleCI](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield)](https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master) [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/8b225581-89f5-42bd-bd82-bfefb0e39a1f/big.png)](https://insight.sensiolabs.com/projects/8b225581-89f5-42bd-bd82-bfefb0e39a1f)
+<p align="center">
+   <i><strong>This project demonstrates the basic protractor-cucumber-typescript framework project setup.
+</strong></i>
+<p>
+
+<p align="center">
+<a href="https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master"><img alt="circleCI Status" src="https://circleci.com/gh/igniteram/protractor-cucumber-typescript/tree/master.svg?style=shield"></a>
+<a href="https://david-dm.org/igniteram/protractor-cucumber-typescript"><img alt="dependencies status" src="https://david-dm.org/igniteram/protractor-cucumber-typescript.svg"></a>
+<a href=""><img alt="typescript" src="https://badges.frapsoft.com/typescript/code/typescript.svg?v=101">
+<a href="https://opensource.org/licenses/MIT"><img alt="MIT License" src="https://img.shields.io/dub/l/vibe-d.svg"></a>
+</p>
+
+---
+
 
 ### Protractor-Cucumber-TypeScript Setup Guide   
-This project demonstrates the basic protractor-cucumber-typescript framework project setup.
 
 ### Medium Article
 Please do checkout my medium article which would give you more insight on this setup. [protractor-cucumber-typescript(Medium)](https://medium.com/@igniteram/e2e-testing-with-protractor-cucumber-using-typescript-564575814e4a)
@@ -51,7 +65,7 @@ npm run webdriver-start
 
 * The below command would create an output folder named 'typeScript' and transpile the .ts files to .js.
 ```
-npm run tsc
+npm run build
 ```
 
 * Now just run the test command which launches the Chrome Browser and runs the scripts.
@@ -74,57 +88,54 @@ Feature: To search typescript in google
 #### Writing Step Definitions
     
 ```
-    import { browser } from 'protractor';
-    import { SearchPageObject } from '../pages/searchPage';
-    import { defineSupportCode } from 'cucumber';
-    let chai = require('chai').use(require('chai-as-promised'));
-    let expect = chai.expect;
+import { browser } from "protractor";
+import { SearchPageObject } from "../pages/searchPage";
+const { Given } = require("cucumber");
+const chai = require("chai").use(require("chai-as-promised"));
+const expect = chai.expect;
 
-    defineSupportCode(function ({Given}) {
-    let search: SearchPageObject = new SearchPageObject();
+const search: SearchPageObject = new SearchPageObject();
 
-        Given(/^I am on google page$/, async () => {
-        await expect(browser.getTitle()).to.eventually.equal('Google');
-    });
-})
+Given(/^I am on google page$/, async () => {
+    await expect(browser.getTitle()).to.eventually.equal("Google");
+});
 ```
 
 #### Writing Page Objects
 ```
-import {$} from 'protractor';
-    
+import { $ } from "protractor";
+
 export class SearchPageObject {
-    public searchTextBox:any;
-    public searchButton:any;
+    public searchTextBox: any;
+    public searchButton: any;
 
     constructor() {
-        this.searchTextBox = $("input[name='q']");
-        this.searchButton = $("button[name='btnG']");
+        this.searchTextBox = $("#lst-ib");
+        this.searchButton = $("input[value='Google Search']");
     }
 }
 ```
 #### Cucumber Hooks
 Following method takes screenshot on failure of each scenario
 ```
-After(async function (scenarioResult) {
-        let world = this;
-    if (scenarioResult.isFailed()) {
-            let screenShot = await browser.takeScreenshot();
-            // screenShot is a base-64 encoded PNG
-            world.attach(screenShot, 'image/png');
-        }
-})
+After(async function(scenario) {
+    if (scenario.result.status === Status.FAILED) {
+        // screenShot is a base-64 encoded PNG
+         const screenShot = await browser.takeScreenshot();
+         this.attach(screenShot, "image/png");
+    }
+});
 ```
 #### CucumberOpts Tags
 Following configuration shows to call specific tags from feature files
 ```
 cucumberOpts: {
     compiler: "ts:ts-node/register",
+    format: "json:./reports/json/cucumber_report.json",
+    require: ["../../stepdefinitions/*.ts", "../../support/*.ts"],
     strict: true,
-    format: ["pretty"],
-    require: ['../StepDefinitions/*.ts', '../Support/*.ts'],
-    tags: '@TypeScriptScenario or @CucumberScenario or @ProtractorScenario'
-}
+    tags: "@TypeScriptScenario or @CucumberScenario or @ProtractorScenario",
+},
 ```
 #### HTML Reports
 Currently this project has been integrated with [cucumber-html-reporter](https://github.com/gkushang/cucumber-html-reporter), which is generated in the `reports` folder when you run `npm test`.

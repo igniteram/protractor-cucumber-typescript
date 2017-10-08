@@ -1,10 +1,8 @@
-import { SearchPageObject } from '../pages/searchPage';
-import { defineSupportCode } from 'cucumber';
+import { SearchPageObject } from "../pages/searchPage";
+const { Then } = require("cucumber");
 
-defineSupportCode(function ({ Then }) {
-    let search: SearchPageObject = new SearchPageObject();
+const search: SearchPageObject = new SearchPageObject();
 
-    Then(/^I clear the search text$/, async () => {
-        await search.searchTextBox.clear();
-    });
-})
+Then(/^I clear the search text$/, async () => {
+     await search.searchTextBox.clear();
+});
