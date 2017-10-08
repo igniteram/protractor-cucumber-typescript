@@ -1,14 +1,13 @@
-import { SearchPageObject } from '../pages/searchPage';
-import { defineSupportCode } from 'cucumber';
+import { browser, protractor } from "protractor";
+import { SearchPageObject } from "../pages/searchPage";
+const { When, Then } = require("cucumber");
 
-defineSupportCode(function ({ When, Then }) {
-    let search: SearchPageObject = new SearchPageObject();
-    When(/^I type "(.*?)"$/, async (text) => {
-        await search.searchTextBox.sendKeys(text);
-    });
+const search: SearchPageObject = new SearchPageObject();
 
-    Then(/^I click on search button$/, async () => {
-        await search.searchButton.click();
-    });
+When(/^I type "(.*?)"$/, async (text) => {
+    await search.searchTextBox.sendKeys(text);
+});
 
-})
+Then(/^I click on search button$/, async () => {
+    await browser.actions().sendKeys(protractor.Key.ENTER).perform();
+});
