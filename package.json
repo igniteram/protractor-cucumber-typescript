@@ -29,19 +29,19 @@
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
   "devDependencies": {
-    "@types/cucumber": "^2.0.4",
-    "@types/node": "^8.0.3",
-    "@types/selenium-webdriver": "^3.0.7",
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.0.0",
-    "cucumber": "^3.0.4",
-    "cucumber-html-reporter": "^3.0.4",
+    "@types/cucumber": "^4.0.1",
+    "@types/node": "^9.6.2",
+    "@types/selenium-webdriver": "^3.0.8",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^4.1.0",
+    "cucumber-html-reporter": "^4.0.2",
     "mkdirp": "^0.5.1",
-    "protractor": "^5.1.2",
-    "protractor-cucumber-framework": "^4.0.8",
+    "protractor": "^5.3.1",
+    "protractor-cucumber-framework": "^5.0.0",
     "rimraf": "^2.6.2",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.5.3"
+    "ts-node": "^6.0.0",
+    "typescript": "^2.8.1"
   },
   "repository": "https://github.com/igniteram/protractor-cucumber-typescript"
 }
