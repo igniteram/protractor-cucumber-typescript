@@ -29,8 +29,8 @@
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
   "devDependencies": {
-    "@types/cucumber": "^4.0.1",
-    "@types/node": "^9.6.2",
+    "@types/cucumber": "^4.0.4",
+    "@types/node": "^9.6.12",
     "@types/selenium-webdriver": "^3.0.8",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
