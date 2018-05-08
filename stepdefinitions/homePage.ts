@@ -6,14 +6,12 @@ const expect = chai.expect;
 
 const search: SearchPageObject = new SearchPageObject();
 
-Given(/^I am on google page$/, async () => {
-    await expect(browser.getTitle()).to.eventually.equal("Google");
-});
-
-Given(/^I am on cucumber search results page$/, async () => {
-    await expect(browser.getTitle()).to.eventually.equal("Cucumber - Google Search");
-});
-
-Given(/^I am on protractor search results page$/, async () => {
-    await expect(browser.getTitle()).to.eventually.equal("Protractor - Google Search");
+Given(/^I am on "(.*?)" search page$/, async (text) => {
+    if(text === 'google') {
+        await expect(browser.getTitle()).to.eventually.equal("Google");
+    } else if(text === 'cucumber') {
+        await expect(browser.getTitle()).to.eventually.equal(text+" - Google Search");
+    } else if(text === 'protractor') {
+        await expect(browser.getTitle()).to.eventually.equal(text+" - Google Search");
+    }   
 });

@@ -9,7 +9,7 @@ export const config: Config = {
 
     SELENIUM_PROMISE_MANAGER: false,
 
-    baseUrl: "http://www.google.com",
+    baseUrl: "https://www.google.com",
 
     capabilities: {
         browserName: "chrome",
@@ -33,7 +33,7 @@ export const config: Config = {
         format: "json:./reports/json/cucumber_report.json",
         require: ["../../typeScript/stepdefinitions/*.js", "../../typeScript/support/*.js"],
         strict: true,
-        tags: "@TypeScriptScenario or @CucumberScenario or @ProtractorScenario",
+        tags: "@CucumberScenario or @ProtractorScenario or @TypeScriptScenario or @OutlineScenario",
     },
 
     onComplete: () => {
