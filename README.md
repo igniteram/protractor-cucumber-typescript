@@ -1,5 +1,5 @@
 <p align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors)
 <img src= "./images/protractor-typescript-cucumber.png" height=300 alt="titleImage.png"/>
@@ -160,8 +160,8 @@ Copyright (c) 2018 Ram Pasala
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/304328?v=4" width="100px;"/><br /><sub><b>Burk Hufnagel</b></sub>](https://github.com/BurkHufnagel)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=BurkHufnagel "Code") | [<img src="https://avatars3.githubusercontent.com/u/6922793?v=4" width="100px;"/><br /><sub><b>Alejandro</b></sub>](https://github.com/sanko1983)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=sanko1983 "Code") [🐛](https://github.com/igniteram/protractor-cucumber-typescript/issues?q=author%3Asanko1983 "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/14068808?v=4" width="100px;"/><br /><sub><b>David Jimenez</b></sub>](https://github.com/runnerdave)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=runnerdave "Code") |
-| :---: | :---: | :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/304328?v=4" width="100px;"/><br /><sub><b>Burk Hufnagel</b></sub>](https://github.com/BurkHufnagel)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=BurkHufnagel "Code") | [<img src="https://avatars3.githubusercontent.com/u/6922793?v=4" width="100px;"/><br /><sub><b>Alejandro</b></sub>](https://github.com/sanko1983)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=sanko1983 "Code") [🐛](https://github.com/igniteram/protractor-cucumber-typescript/issues?q=author%3Asanko1983 "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/14068808?v=4" width="100px;"/><br /><sub><b>David Jimenez</b></sub>](https://github.com/runnerdave)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=runnerdave "Code") | [<img src="https://avatars1.githubusercontent.com/u/15998104?v=4" width="100px;"/><br /><sub><b>Ram Pasala</b></sub>](https://in.linkedin.com/in/rpasala)<br />[💻](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=igniteram "Code") [📖](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=igniteram "Documentation") [⚠️](https://github.com/igniteram/protractor-cucumber-typescript/commits?author=igniteram "Tests") [🐛](https://github.com/igniteram/protractor-cucumber-typescript/issues?q=author%3Aigniteram "Bug reports") |
+| :---: | :---: | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
