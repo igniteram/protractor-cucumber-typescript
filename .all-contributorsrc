@@ -1,0 +1,22 @@
+{
+  "projectName": "protractor-cucumber-typescript",
+  "projectOwner": "igniteram",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "BurkHufnagel",
+      "name": "Burk Hufnagel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/304328?v=4",
+      "profile": "https://github.com/BurkHufnagel",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
