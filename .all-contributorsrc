@@ -9,6 +9,18 @@
   "imageSize": 100,
   "commit": true,
   "contributors": [
+     {
+      "login": "igniteram",
+      "name": "Ram Pasala",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15998104?v=4",
+      "profile": "https://in.linkedin.com/in/rpasala",
+      "contributions": [
+        "code",
+        "doc",
+        "test",
+        "bug"
+      ]
+    },
     {
       "login": "BurkHufnagel",
       "name": "Burk Hufnagel",
@@ -35,18 +47,6 @@
       "profile": "https://github.com/runnerdave",
       "contributions": [
         "code"
-      ]
-    },
-    {
-      "login": "igniteram",
-      "name": "Ram Pasala",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/15998104?v=4",
-      "profile": "https://in.linkedin.com/in/rpasala",
-      "contributions": [
-        "code",
-        "doc",
-        "test",
-        "bug"
       ]
     }
   ]
