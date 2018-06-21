@@ -27,6 +27,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "runnerdave",
+      "name": "David Jimenez",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/14068808?v=4",
+      "profile": "https://github.com/runnerdave",
+      "contributions": [
+        "code"
+      ]
     }
   ]
 }
