@@ -7,6 +7,7 @@
         "declaration": false,
         "removeComments": false,
         "noImplicitAny": false,
+        "skipLibCheck": true,
         "outDir": "typeScript",
         "typeRoots": [ "./node_modules/@types" ],
         "types": ["node","cucumber"]
