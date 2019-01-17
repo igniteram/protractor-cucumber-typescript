@@ -1,0 +1,53 @@
+{
+  "projectName": "protractor-cucumber-typescript",
+  "projectOwner": "igniteram",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+     {
+      "login": "igniteram",
+      "name": "Ram Pasala",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15998104?v=4",
+      "profile": "https://in.linkedin.com/in/rpasala",
+      "contributions": [
+        "code",
+        "doc",
+        "test",
+        "bug"
+      ]
+    },
+    {
+      "login": "BurkHufnagel",
+      "name": "Burk Hufnagel",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/304328?v=4",
+      "profile": "https://github.com/BurkHufnagel",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sanko1983",
+      "name": "Alejandro",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6922793?v=4",
+      "profile": "https://github.com/sanko1983",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "runnerdave",
+      "name": "David Jimenez",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/14068808?v=4",
+      "profile": "https://github.com/runnerdave",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}

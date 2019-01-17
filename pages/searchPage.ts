@@ -1,11 +1,13 @@
-import { $ } from "protractor";
+import { $, ElementFinder } from "protractor";
 
 export class SearchPageObject {
-    public searchTextBox: any;
-    public searchButton: any;
+    public searchTextBox: ElementFinder;
+    public searchButton: ElementFinder;
+    public logo: ElementFinder;
 
     constructor() {
-        this.searchTextBox = $("#lst-ib");
+        this.searchTextBox = $("input[title='Search']");
         this.searchButton = $("input[value='Google Search']");
+        this.logo = $("#logo > img");
     }
 }

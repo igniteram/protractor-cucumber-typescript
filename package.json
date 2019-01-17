@@ -1,6 +1,6 @@
 {
   "name": "protractor-typescript-cucumber",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "license": "MIT",
   "description": "To demostrate protractor cucumber tests for angular/non angular apps with allure report framework",
   "homepage": "https://github.com/igniteram/protractor-cucumber-typescript",
@@ -23,25 +23,29 @@
     "build": "tsc",
     "clean": "rimraf typeScript/",
     "clean-build": "npm run clean && npm run build",
+    "init-contributors": "all-contributors init",
+    "add-contributors": "all-contributors add",
+    "generate-contributors": "all-contributors generate",
     "test": "protractor typeScript/config/config.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start"
   },
   "author": "Ram Pasala <ram.pasala7@gmail.com>",
   "devDependencies": {
-    "@types/cucumber": "^2.0.4",
-    "@types/node": "^8.0.3",
-    "@types/selenium-webdriver": "^3.0.7",
-    "chai": "^4.0.2",
-    "chai-as-promised": "^7.0.0",
-    "cucumber": "^3.0.4",
-    "cucumber-html-reporter": "^3.0.4",
+    "@types/cucumber": "^4.0.4",
+    "@types/node": "^10.7.1",
+    "@types/selenium-webdriver": "^3.0.10",
+    "all-contributors-cli": "^5.4.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "cucumber": "^5.0.3",
+    "cucumber-html-reporter": "^4.0.3",
     "mkdirp": "^0.5.1",
-    "protractor": "^5.1.2",
-    "protractor-cucumber-framework": "^4.0.8",
+    "protractor": "^5.4.0",
+    "protractor-cucumber-framework": "^6.1.1",
     "rimraf": "^2.6.2",
-    "ts-node": "^3.3.0",
-    "typescript": "^2.5.3"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
   },
   "repository": "https://github.com/igniteram/protractor-cucumber-typescript"
 }
