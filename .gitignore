@@ -3,3 +3,4 @@ TypeScript/
 reports/
 *.js
 .vscode
+.DS_Store
