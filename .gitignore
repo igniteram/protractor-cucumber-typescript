@@ -3,3 +3,4 @@ TyepScript/
 reports/
 *.js
 .vscode
+.DS_Store
