@@ -38,11 +38,11 @@
     "all-contributors-cli": "^5.4.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
-    "cucumber": "^4.2.1",
+    "cucumber": "^5.0.3",
     "cucumber-html-reporter": "^4.0.3",
     "mkdirp": "^0.5.1",
     "protractor": "^5.4.0",
-    "protractor-cucumber-framework": "^6.0.0",
+    "protractor-cucumber-framework": "^6.1.1",
     "rimraf": "^2.6.2",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
