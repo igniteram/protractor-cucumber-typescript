@@ -8,6 +8,6 @@ export class SearchPageObject {
     constructor() {
         this.searchTextBox = $("input[title='Search']");
         this.searchButton = $("input[value='Google Search']");
-        this.logo = $("#logo > img");
+        this.logo = $("div.logo img");
     }
 }
