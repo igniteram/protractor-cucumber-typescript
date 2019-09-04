@@ -19,10 +19,11 @@ export const config: Config = {
     frameworkPath: require.resolve("protractor-cucumber-framework"),
 
     specs: [
-        "../../features/*.feature",
+        "../features/*.feature",
     ],
 
     onPrepare: () => {
+        require('ts-node').register({ project: './tsconfig.json' });
         browser.ignoreSynchronization = true;
         browser.manage().window().maximize();
         Reporter.createDirectory(jsonReports);
@@ -31,7 +32,7 @@ export const config: Config = {
     cucumberOpts: {
         compiler: "ts:ts-node/register",
         format: "json:./reports/json/cucumber_report.json",
-        require: ["../../typeScript/stepdefinitions/*.js", "../../typeScript/support/*.js"],
+        require: ["../stepdefinitions/*.ts", "../support/*.ts"],
         strict: true,
         tags: "@CucumberScenario or @ProtractorScenario or @TypeScriptScenario or @OutlineScenario",
     },

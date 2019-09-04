@@ -1,16 +1,18 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es6",
+        "target": "esnext",
         "moduleResolution": "node",
-        "sourceMap": false,
+        "sourceMap": true,
         "declaration": false,
         "removeComments": false,
         "noImplicitAny": false,
         "skipLibCheck": true,
-        "outDir": "typeScript",
         "typeRoots": [ "./node_modules/@types" ],
-        "types": ["node","cucumber"]
+        "types": ["node","cucumber","chai"],
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "exclude": [
         "node_modules",

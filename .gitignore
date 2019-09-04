@@ -1,7 +1,6 @@
 node_modules/
-TypeScript/
 reports/
-*.js
 .vscode
 .DS_Store
-package-lock.json
+config/config.js
+support/reporter.js
