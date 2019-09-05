@@ -26,7 +26,7 @@
     "init-contributors": "all-contributors init",
     "add-contributors": "all-contributors add",
     "generate-contributors": "all-contributors generate",
-    "test": "protractor typeScript/config/config.js",
+    "test": "tsc ./config/config.ts && protractor ./config/config.js",
     "webdriver-update": "webdriver-manager update",
     "webdriver-start": "webdriver-manager start"
   },
@@ -41,7 +41,7 @@
     "cucumber": "^5.0.3",
     "cucumber-html-reporter": "^4.0.3",
     "mkdirp": "^0.5.1",
-    "protractor": "^5.4.0",
+    "protractor": "^5.4.2",
     "protractor-cucumber-framework": "^6.1.1",
     "rimraf": "^2.6.2",
     "ts-node": "^8.0.2",
